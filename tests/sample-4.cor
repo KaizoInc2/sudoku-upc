@@ -1,0 +1,128 @@
+A la casella (3,F) hi ha d'anar un 8
+A la casella (4,D) hi ha d'anar un 2
+A la casella (5,D) hi ha d'anar un 4
+A la casella (5,E) hi ha d'anar un 8
+A la casella (5,H) hi ha d'anar un 6
+A la casella (6,H) hi ha d'anar un 4
+A la casella (7,E) hi ha d'anar un 2
+A la casella (7,G) hi ha d'anar un 4
+A la casella (8,E) hi ha d'anar un 7
+A la casella (8,F) hi ha d'anar un 4
+A la casella (8,H) hi ha d'anar un 5
+A la casella (9,A) hi ha d'anar un 4
+A la casella (9,F) hi ha d'anar un 6
+A la casella (9,I) hi ha d'anar un 2
+   A B C   D E F   G H I
+1  . . . | . . . | . 8 4 
+2  5 . . | . 4 2 | 6 . . 
+3  . . 4 | . . 8 | . 2 . 
+  -------+-------+-------
+4  . 4 . | 2 6 3 | 7 . . 
+5  . . . | 4 8 1 | . 6 3 
+6  6 3 . | 9 5 7 | 2 4 . 
+  -------+-------+-------
+7  . 5 . | . 2 9 | 4 . 6 
+8  3 2 . | 8 7 4 | 1 5 9 
+9  4 . 9 | 5 . 6 | 8 . 2 
+
+A la casella (1,F) hi ha d'anar un 5
+A la casella (2,B) hi ha d'anar un 8
+A la casella (2,H) hi ha d'anar un 9
+A la casella (4,A) hi ha d'anar un 9
+A la casella (4,H) hi ha d'anar un 1
+A la casella (5,B) hi ha d'anar un 7
+A la casella (5,G) hi ha d'anar un 9
+A la casella (6,C) hi ha d'anar un 1
+A la casella (6,I) hi ha d'anar un 8
+A la casella (7,A) hi ha d'anar un 8
+A la casella (7,C) hi ha d'anar un 7
+A la casella (7,D) hi ha d'anar un 1
+A la casella (7,H) hi ha d'anar un 3
+A la casella (8,C) hi ha d'anar un 6
+A la casella (9,B) hi ha d'anar un 1
+A la casella (9,E) hi ha d'anar un 3
+A la casella (9,H) hi ha d'anar un 7
+   A B C   D E F   G H I
+1  . . . | . . 5 | . 8 4 
+2  5 8 . | . 4 2 | 6 9 . 
+3  . . 4 | . . 8 | . 2 . 
+  -------+-------+-------
+4  9 4 . | 2 6 3 | 7 1 . 
+5  . 7 . | 4 8 1 | 9 6 3 
+6  6 3 1 | 9 5 7 | 2 4 8 
+  -------+-------+-------
+7  8 5 7 | 1 2 9 | 4 3 6 
+8  3 2 6 | 8 7 4 | 1 5 9 
+9  4 1 9 | 5 3 6 | 8 7 2 
+
+A la casella (1,G) hi ha d'anar un 3
+A la casella (2,C) hi ha d'anar un 3
+A la casella (2,D) hi ha d'anar un 7
+A la casella (2,I) hi ha d'anar un 1
+A la casella (3,D) hi ha d'anar un 3
+A la casella (3,G) hi ha d'anar un 5
+A la casella (3,I) hi ha d'anar un 7
+A la casella (4,C) hi ha d'anar un 8
+A la casella (4,I) hi ha d'anar un 5
+A la casella (5,A) hi ha d'anar un 2
+A la casella (5,C) hi ha d'anar un 5
+   A B C   D E F   G H I
+1  . . . | . . 5 | 3 8 4 
+2  5 8 3 | 7 4 2 | 6 9 1 
+3  . . 4 | 3 . 8 | 5 2 7 
+  -------+-------+-------
+4  9 4 8 | 2 6 3 | 7 1 5 
+5  2 7 5 | 4 8 1 | 9 6 3 
+6  6 3 1 | 9 5 7 | 2 4 8 
+  -------+-------+-------
+7  8 5 7 | 1 2 9 | 4 3 6 
+8  3 2 6 | 8 7 4 | 1 5 9 
+9  4 1 9 | 5 3 6 | 8 7 2 
+
+A la casella (1,A) hi ha d'anar un 7
+A la casella (1,C) hi ha d'anar un 2
+A la casella (1,D) hi ha d'anar un 6
+A la casella (1,E) hi ha d'anar un 1
+A la casella (3,A) hi ha d'anar un 1
+A la casella (3,B) hi ha d'anar un 6
+A la casella (3,E) hi ha d'anar un 9
+   A B C   D E F   G H I
+1  7 . 2 | 6 1 5 | 3 8 4 
+2  5 8 3 | 7 4 2 | 6 9 1 
+3  1 6 4 | 3 9 8 | 5 2 7 
+  -------+-------+-------
+4  9 4 8 | 2 6 3 | 7 1 5 
+5  2 7 5 | 4 8 1 | 9 6 3 
+6  6 3 1 | 9 5 7 | 2 4 8 
+  -------+-------+-------
+7  8 5 7 | 1 2 9 | 4 3 6 
+8  3 2 6 | 8 7 4 | 1 5 9 
+9  4 1 9 | 5 3 6 | 8 7 2 
+
+A la casella (1,B) hi ha d'anar un 9
+   A B C   D E F   G H I
+1  7 9 2 | 6 1 5 | 3 8 4 
+2  5 8 3 | 7 4 2 | 6 9 1 
+3  1 6 4 | 3 9 8 | 5 2 7 
+  -------+-------+-------
+4  9 4 8 | 2 6 3 | 7 1 5 
+5  2 7 5 | 4 8 1 | 9 6 3 
+6  6 3 1 | 9 5 7 | 2 4 8 
+  -------+-------+-------
+7  8 5 7 | 1 2 9 | 4 3 6 
+8  3 2 6 | 8 7 4 | 1 5 9 
+9  4 1 9 | 5 3 6 | 8 7 2 
+
+   A B C   D E F   G H I
+1  7 9 2 | 6 1 5 | 3 8 4 
+2  5 8 3 | 7 4 2 | 6 9 1 
+3  1 6 4 | 3 9 8 | 5 2 7 
+  -------+-------+-------
+4  9 4 8 | 2 6 3 | 7 1 5 
+5  2 7 5 | 4 8 1 | 9 6 3 
+6  6 3 1 | 9 5 7 | 2 4 8 
+  -------+-------+-------
+7  8 5 7 | 1 2 9 | 4 3 6 
+8  3 2 6 | 8 7 4 | 1 5 9 
+9  4 1 9 | 5 3 6 | 8 7 2 
+

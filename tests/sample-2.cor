@@ -1,0 +1,86 @@
+1A: [1, 5]
+1A: 2 es un valor no possible
+1A: 3 es un valor no possible
+1A: 4 es un valor no possible
+1A: 6 es un valor no possible
+1A: 7 es un valor no possible
+1A: 8 es un valor no possible
+1A: 9 es un valor no possible
+   A B C   D E F   G H I
+1  1 . 6 | . . 2 | 3 . 4 
+2  9 . 4 | 7 5 . | . 8 2 
+3  . . 8 | . . 6 | . . 5 
+  -------+-------+-------
+4  . . 3 | . . . | . 4 . 
+5  2 . . | 4 . . | 8 3 . 
+6  4 . 7 | 5 . . | . . . 
+  -------+-------+-------
+7  . . . | 6 . . | . . 8 
+8  7 . . | . 2 . | 4 5 3 
+9  . . . | 3 7 . | . 6 9 
+   A B C   D E F   G H I
+1  5 . 6 | . . 2 | 3 . 4 
+2  9 . 4 | 7 5 . | . 8 2 
+3  . . 8 | . . 6 | . . 5 
+  -------+-------+-------
+4  . . 3 | . . . | . 4 . 
+5  2 . . | 4 . . | 8 3 . 
+6  4 . 7 | 5 . . | . . . 
+  -------+-------+-------
+7  . . . | 6 . . | . . 8 
+8  7 . . | . 2 . | 4 5 3 
+9  . . . | 3 7 . | . 6 9 
+1B: [1, 7]
+1B: 2 es un valor no possible
+1B: 3 es un valor no possible
+1B: 4 es un valor no possible
+1B: 5 es un valor no possible
+1B: 6 es un valor no possible
+1B: 8 es un valor no possible
+1B: 9 es un valor no possible
+   A B C   D E F   G H I
+1  5 7 6 | . . 2 | 3 . 4 
+2  9 . 4 | 7 5 . | . 8 2 
+3  . . 8 | . . 6 | . . 5 
+  -------+-------+-------
+4  . . 3 | . . . | . 4 . 
+5  2 . . | 4 . . | 8 3 . 
+6  4 . 7 | 5 . . | . . . 
+  -------+-------+-------
+7  . . . | 6 . . | . . 8 
+8  7 . . | . 2 . | 4 5 3 
+9  . . . | 3 7 . | . 6 9 
+   A B C   D E F   G H I
+1  5 1 6 | . . 2 | 3 . 4 
+2  9 . 4 | 7 5 . | . 8 2 
+3  . . 8 | . . 6 | . . 5 
+  -------+-------+-------
+4  . . 3 | . . . | . 4 . 
+5  2 . . | 4 . . | 8 3 . 
+6  4 . 7 | 5 . . | . . . 
+  -------+-------+-------
+7  . . . | 6 . . | . . 8 
+8  7 . . | . 2 . | 4 5 3 
+9  . . . | 3 7 . | . 6 9 
+1C: []
+1C: Casella no modificable
+1C: Casella no modificable
+1C: Casella no modificable
+1C: Casella no modificable
+1C: Casella no modificable
+1C: Casella no modificable
+1C: Casella no modificable
+1C: Casella no modificable
+1C: Casella no modificable
+   A B C   D E F   G H I
+1  5 1 6 | . . 2 | 3 . 4 
+2  9 . 4 | 7 5 . | . 8 2 
+3  . . 8 | . . 6 | . . 5 
+  -------+-------+-------
+4  . . 3 | . . . | . 4 . 
+5  2 . . | 4 . . | 8 3 . 
+6  4 . 7 | 5 . . | . . . 
+  -------+-------+-------
+7  . . . | 6 . . | . . 8 
+8  7 . . | . 2 . | 4 5 3 
+9  . . . | 3 7 . | . 6 9 

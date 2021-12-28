@@ -60,8 +60,8 @@ void printSudoku(const Matrix& sudoku) {
 }
 
 // Gets the possible values on the sudoku in a given row and column, if there is already a value in that position it returns a empty vector
-vector<int> getPossibleValues(const Matrix& sudoku, int row, int col) {
-    if (sudoku[row][col] != 0) return {};
+vector<int> getPossibleValues(const Matrix& sudoku, const Matrix& initialSudoku, int row, int col) {
+    if (initialSudoku[row][col] != 0) return {};
     int values[9] = {1, 1, 1, 1, 1, 1, 1, 1, 1};
 
     // Check for rows and columns
@@ -92,26 +92,37 @@ vector<int> getPossibleValues(const Matrix& sudoku, int row, int col) {
 }
 
 // Changes a user input value in the sudoku
-void changeValue(Matrix& sudoku, const Matrix& initialSudoku, int row, int col, int value) {
-    if (initialSudoku[row][col] != 0) cout << "Casella no modificable" << endl;
-    else if (!includes(getPossibleValues(sudoku, row, col), value)) cout << "Valor no possible" << endl;
+void changeValue(Matrix& sudoku, const Matrix& initialSudoku, int row, int col, int input_row, char input_col, int value) {
+    if (initialSudoku[row][col] != 0) cout << input_row << input_col << ": Casella no modificable" << endl;
+    else if (!includes(getPossibleValues(sudoku, initialSudoku, row, col), value)) cout << input_row << input_col << ": " << value << " es un valor no possible" << endl;
     else sudoku[row][col] = value;
 }
 
 // Checks if a value is obligatory in a position of the sudoku
-bool isObligatory(const Matrix& sudoku, int row, int col, int value) {
+bool isObligatory(const Matrix& sudoku, const Matrix& initialSudoku, int row, int col, int value) {
     bool obligatory = true;
     int iterator = 0;
     while (obligatory && iterator < 9) {
-        if (col != iterator && includes(getPossibleValues(sudoku, row, iterator), value)) obligatory = false;
-        if (row != iterator && includes(getPossibleValues(sudoku, iterator, col), value)) obligatory = false;
+        if (sudoku[row][iterator] == 0 && iterator != col && includes(getPossibleValues(sudoku, initialSudoku, row, iterator), value)) obligatory = false;
         ++iterator;
     }
+    if (obligatory) return true;
 
+    obligatory = true;
+    iterator = 0;
+    while (obligatory && iterator < 9) {
+        if (sudoku[iterator][col] == 0 && iterator != row && includes(getPossibleValues(sudoku, initialSudoku, iterator, col), value)) obligatory = false;
+        ++iterator;
+    }
+    if (obligatory) return true;
+
+    obligatory = true;
     vector<int> subMatrix = {row/3, col/3};
     for (int i = 0; i < 3 && obligatory; ++i) {
         for (int j = 0; j < 3 && obligatory; ++j) {
-            if (i != row && j != col && includes(getPossibleValues(sudoku, i, j), value)) obligatory = false;
+            int posX = i + (subMatrix[0]*3);
+            int posY = j + (subMatrix[1]*3);
+            if (sudoku[posX][posY] == 0 && (posX != row || posY != col) && includes(getPossibleValues(sudoku, initialSudoku, posX, posY), value)) obligatory = false;
         }
     }
 
@@ -119,14 +130,14 @@ bool isObligatory(const Matrix& sudoku, int row, int col, int value) {
 }
 
 // Solves the sudoku
-void solveSudoku(Matrix& sudoku) {
+void solveSudoku(Matrix& sudoku, const Matrix& initialSudoku) {
     bool solved = false;
     while (!solved) {
         bool changed = false;
         for (int i = 0; i < 9; ++i) {
             for (int j = 0; j < 9; ++j) {
                 if (sudoku[i][j] == 0) {
-                    vector<int> values = getPossibleValues(sudoku, i, j);
+                    vector<int> values = getPossibleValues(sudoku, initialSudoku, i, j);
                     if (values.size() == 1) {
                         sudoku[i][j] = values[0];
                         cout << "A la casella (" << i+1 << "," << char('A'+j) << ") hi ha d'anar un " << values[0] << endl;
@@ -134,7 +145,7 @@ void solveSudoku(Matrix& sudoku) {
                     }
                     else if (values.size() > 1) {
                         for (int k = 0; k < (int)values.size(); ++k) {
-                            if (isObligatory(sudoku, i, j, values[k])) {
+                            if (isObligatory(sudoku, initialSudoku, i, j, values[k])) {
                                 sudoku[i][j] = values[k];
                                 cout << "A la casella (" << i+1 << "," << char('A'+j) << ") hi ha d'anar un " << values[k] << endl;
                                 changed = true;
@@ -146,6 +157,7 @@ void solveSudoku(Matrix& sudoku) {
             }
         }
         printSudoku(sudoku);
+        cout << endl;
         if (!changed) solved = true;
     }
 }
@@ -161,7 +173,7 @@ int main() {
 
         else if (instruction == 'C') printSudoku(sudoku);
 
-        else if (instruction == 'R') solveSudoku(sudoku);
+        else if (instruction == 'R') solveSudoku(sudoku, initialSudoku);
 
         else if (instruction == 'A' || instruction == 'B') {
             int input_row;
@@ -171,7 +183,8 @@ int main() {
             int col = input_col - 'A';
 
             if (instruction == 'A') {
-                vector<int> possible = getPossibleValues(sudoku, row, col);
+                cout << input_row << input_col << ": ";
+                vector<int> possible = getPossibleValues(sudoku, initialSudoku, row, col);
                 cout << "[";
                 for (int i = 0; i < (int)possible.size(); ++i) {
                     if (i != 0) cout << ", ";
@@ -183,7 +196,7 @@ int main() {
             else if (instruction == 'B') {
                 int value;
                 cin >> value;
-                changeValue(sudoku, initialSudoku, row, col, value);
+                changeValue(sudoku, initialSudoku, row, col, input_row, input_col, value);
             }
         }
     }
